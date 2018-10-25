@@ -1,7 +1,0 @@
-from info import info
-from warn import warn
-from debug import debug
-
-var name = "logging"
-var version = "1.0.0"
-var dependencies = ["console"]

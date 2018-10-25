@@ -1,5 +1,0 @@
-from log import log
-
-fun debug(content: str) -> none {
-    log(content, "debug")
-}

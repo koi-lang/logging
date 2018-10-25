@@ -1,0 +1,8 @@
+core import console::print
+
+pro log(content: str, type: str) {
+    call print("[")
+    call print(type)
+    call print("]: ")
+    call print(content)
+}

@@ -1,5 +1,0 @@
-from console import print
-
-fun log(content: str, type: str = "log") -> none {
-    print("#{type.upper()}: #{content}")
-}

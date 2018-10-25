@@ -1,5 +1,0 @@
-from log import log
-
-fun warn(content: str) -> none {
-    log(content, "warn")
-}
