@@ -1,0 +1,5 @@
+std import logging::log
+
+pro debug(content: str) {
+	call log(content, DEBUG)
+}

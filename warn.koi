@@ -1,0 +1,5 @@
+std import logging::log
+
+pro warn(content: str) {
+	call log(content, WARNING)
+}

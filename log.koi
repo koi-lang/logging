@@ -1,8 +1,27 @@
 core import console::print
+core import console::println
 
-pro log(content: str, type: str) {
+std import logging::log_level
+
+pro log(content: str, type: LogLevel) {
     call print("[")
-    call print(type)
+	
+	if type == INFO {
+		call print("Info")
+	}
+	elf type == DEBUG {
+		call print("Debug")
+	}
+	elf type == CONFIG {
+		call print("Config")
+	}
+	elf type == WARNING {
+		call print("Warning")
+	}
+	elf type == FATAL {
+		call print("Fatal")
+	}
+	
     call print("]: ")
-    call print(content)
+    call println(content)
 }

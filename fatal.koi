@@ -1,0 +1,5 @@
+std import logging::log
+
+pro fatal(content: str) {
+	call log(content, FATAL)
+}

@@ -1,0 +1,5 @@
+std import logging::log
+
+pro info(content: str) {
+	call log(content, INFO)
+}
