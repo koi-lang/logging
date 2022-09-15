@@ -1,5 +1,5 @@
-std import logging::log
+import std::logging::klog
 
 pro debug(content: str) {
-	call log(content, DEBUG)
+	call klog(content, DEBUG)
 }

@@ -1,9 +1,9 @@
-core import console::print
-core import console::println
+import core::console::print
+import core::console::println
 
-std import logging::log_level
+import std::logging::log_level
 
-pro log(content: str, type: LogLevel) {
+pro klog(content: str, type: LogLevel) {
     call print("[")
 	
 	if type == INFO {
