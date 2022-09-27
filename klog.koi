@@ -1,26 +1,33 @@
 import core::console::print
 import core::console::println
+import core::time::hour
+import core::time::minute
+import core::time::second
 
 import std::logging::log_level
 
 pro klog(content: str, type: LogLevel) {
     call print("[")
-	
-	if type == INFO {
-		call print("Info")
-	}
-	elf type == DEBUG {
-		call print("Debug")
-	}
-	elf type == CONFIG {
-		call print("Config")
-	}
-	elf type == WARNING {
-		call print("Warning")
-	}
-	elf type == FATAL {
-		call print("Fatal")
-	}
+
+    call print(call hour())
+    call print(":")
+    call print(call minute())
+    call print(":")
+    call print(call second())
+
+    call print("]")
+
+    call print(" ")
+
+    call print("[")
+
+    when type {
+        is INFO => call print("Info   ")
+        is DEBUG => call print("Debug  ")
+        is CONFIG => call print("Config ")
+        is WARNING => call print("Warning")
+        is FATAL => call print("Fatal  ")
+    }
 	
     call print("]: ")
     call println(content)
